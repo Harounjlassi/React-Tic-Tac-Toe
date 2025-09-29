@@ -1,0 +1,26 @@
+# 🎮 React Tic Tac Toe
+
+A simple **Tic Tac Toe game** built with React.  
+This project was created by **Haroun Jlassi** as part of my learning journey in React and JavaScript.
+
+---
+
+## 🌍 Live Site  
+👉 [Play the game here](https://tic-tac-toe-haroun.vercel.app/)
+
+---
+
+## ✨ Features
+- Two-player mode (X and O)  
+- Dynamic player name editing  
+- Detects winner or draw  
+- Game restart option  
+- Move log (history of turns)  
+- Clean and simple UI  
+
+---
+
+## 📸 Screenshot  
+(Add a screenshot of your game here once deployed)
+
+![Tic Tac Toe Screenshot](screenshot.png)
