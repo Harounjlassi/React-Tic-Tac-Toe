@@ -1,20 +1,8 @@
 import Player from "./Player";
 
-const initialGameBoard = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null],
-];
-export default function GameBoard({ onSelectSquare, turns }) {
-  console.log("dsddddd");
-  let gameBoard = initialGameBoard;
-  //deriving state
-  //gameBoard is computed value that is devived from a state
-  for (const turn of turns) {
-    const { square, player } = turn;
-    const { row, col } = square;
-    gameBoard[row][col] = player;
-  }
+
+export default function GameBoard({ onSelectSquare, board }) {
+
 
   // const [gameBoard, setGameBoard] = useState(initialGameBoard);
   // function handleCellClick(rowIndex, cellIndex) {
@@ -31,12 +19,12 @@ export default function GameBoard({ onSelectSquare, turns }) {
 
   return (
     <ol id="game-board">
-      {gameBoard.map((row, rowIndex) => (
+      {board.map((row, rowIndex) => (
         <li key={rowIndex}>
           <ol>
-            {row.map((cell, colIndex) => (
+            {row.map((playerSymbol, colIndex) => (
               <li key={colIndex} className="cell">
-                <button onClick={()=>onSelectSquare(rowIndex,colIndex)}>{cell}</button>
+                <button onClick={()=>onSelectSquare(rowIndex,colIndex)} disabled={playerSymbol!==null} >{playerSymbol}</button>
               </li>
             ))}
           </ol>
